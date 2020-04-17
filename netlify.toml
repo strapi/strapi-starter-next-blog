@@ -1,6 +1,6 @@
 [build]
   base = "frontend/"
-  publish = "build/"
+  publish = ".next/"
   command = "yarn build"
 
 [template.environment]
