@@ -1,5 +1,5 @@
 "use strict";
-
+require("dotenv").config();
 /**
  * An asynchronous bootstrap function that runs before
  * your application gets started.
@@ -9,6 +9,9 @@
  *
  * See more details here: https://strapi.io/documentation/3.0.0-beta.x/concepts/configurations.html#bootstrap
  */
+const fs = require("fs");
+const path = require("path");
+const { articles, categories } = require("../../seed/seed");
 
 const findPublicRole = async () => {
   const result = await strapi
@@ -42,9 +45,76 @@ const isFirstRun = async () => {
   return !initHasRun;
 };
 
+const getFilesizeInBytes = filepath => {
+  var stats = fs.statSync(filepath);
+  var fileSizeInBytes = stats["size"];
+  return fileSizeInBytes;
+};
+
+const createSeedData = async () => {
+  const categoriesPromises = categories.map(({ ...rest }) => {
+    return strapi.services.category.create({
+      ...rest
+    });
+  });
+  const articlesPromises = articles.map(article => {
+    const { imageFileName, mimeType, ...rest } = article;
+    const filepath = path.join(
+      strapi.config.seed.path,
+      `/images/${imageFileName}`
+    );
+    const size = getFilesizeInBytes(filepath);
+    const image = {
+      path: filepath,
+      name: imageFileName,
+      size,
+      type: mimeType
+    };
+    const files = {
+      image
+    };
+    return strapi.services.article.create(
+      {
+        author: null,
+        ...rest
+      },
+      { files }
+    );
+  });
+  await Promise.all(categoriesPromises);
+  await Promise.all(articlesPromises);
+};
+
+const setDefaultFileUploader = async () => {
+  if (strapi.config.environment !== "production") {
+    return;
+  }
+  const pluginStore = strapi.store({
+    environment: strapi.config.environment,
+    type: "plugin",
+    name: "upload"
+  });
+  const config = await pluginStore.get({ key: "provider" });
+  await pluginStore.set({
+    key: "provider",
+    value: {
+      ...config,
+      ...{
+        provider: "cloudinary",
+        name: "Cloudinary",
+        cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+        api_key: process.env.CLOUDINARY_API_KEY,
+        api_secret: process.env.CLOUDINARY_API_SECRET
+      }
+    }
+  });
+};
+
 module.exports = async () => {
   const shouldSetDefaultPermissions = await isFirstRun();
   if (shouldSetDefaultPermissions) {
     await setDefaultPermissions();
+    await setDefaultFileUploader();
+    await createSeedData();
   }
 };

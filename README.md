@@ -8,6 +8,17 @@ You may want to know how to develop such a starter by your own! This starter is 
 
 ![screenshot image](/screenshot.png)
 
+### Deploy the backend
+
+To deploy this Strapi instance you'll need:
+
+- [An Heroku account](https://signup.heroku.com/) for free
+- [A Cloudinary account for saving images](https://cloudinary.com/users/register/free) for free
+
+Once you have created these accounts you can deploy your instance by clicking on this button
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/strapi/strapi-starter-next-blog)
+
 ### Features
 
 - 2 Content types: Article, Category
