@@ -1,0 +1,8 @@
+{
+  "name": "Strapi Next Starter",
+  "description": "This Strapi instance contains article and category content types with all permissions open",
+  "keywords": ["strapi", "headless", "CMS", "open-source"],
+  "website": "https://strapi.io",
+  "repository": "https://github.com/strapi/strapi-starter-next-blog/tree/deploy/heroku",
+  "logo": "https://strapi.io/assets/images/logo.png"
+}
