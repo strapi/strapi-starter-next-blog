@@ -29,7 +29,7 @@ const setDefaultPermissions = async () => {
     permissions.map(p =>
       strapi
         .query("permission", "users-permissions")
-        .update({ id: p.id }, { enabled: false })
+        .update({ id: p.id }, { enabled: true })
     )
   );
 };
