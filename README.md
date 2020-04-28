@@ -85,12 +85,10 @@ cd backend
 
 # Using yarn
 yarn build
-yarn seed
 yarn develop
 
 # Using npm
 npm run build
-npm run seed
 npm run develop
 ```
 
