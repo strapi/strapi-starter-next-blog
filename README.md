@@ -21,31 +21,49 @@ Once you have created these accounts you can deploy your instance by clicking on
 
 ### Deploy the frontend
 
+**Vercel**
+
+  - Log in to Vercel by installing now CLI:
+
+  `npm i -g now`
+
+  - Secure your `API_URL` with now by running the following command:
+
+  `now secret add api-url <https://your-strapi-instance.herokuapp.com>`
+
+You can deploy your app and for this you have two options. But for each one of them, just press enter when the root directory of your code is asked.
+
+  - Execute `now`
+
+  - Or you can simply click on the following button
+
+[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/strapi/strapi-starter-next-blog)
+
 **Netlify**
 
 To deploy this Strapi instance you'll need:
 
-- [A Netlify account](https://app.netlify.com/signup) for free
+  - [A Netlify account](https://app.netlify.com/signup) for free
 
 Once you have created your account you can deploy your instance by clicking on this button.
 
 [![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/strapi/strapi-starter-next-blog)
 
-- Select a repository name and fill API_URL with the url of your Strapi instance on Heroku (eg: https://your-app.herokuapp.com) without the trailing slash
+  - Select a repository name and fill API_URL with the url of your Strapi instance on Heroku (eg: https://your-app.herokuapp.com) without the trailing slash
 
 ### Features
 
-- 2 Content types: Article, Category
-- 2 Created articles
-- 3 Created categories
-- Permissions set to `true` for article and category
-- Responsive design using UIkit
+  - 2 Content types: Article, Category
+  - 2 Created articles
+  - 3 Created categories
+  - Permissions set to `true` for article and category
+  - Responsive design using UIkit
 
 ### Pages
 
-- "/" display every articles
-- "/article/:id" display one article
-- "/category/:id" display articles depending on the category
+  - "/" display every articles
+  - "/article/:id" display one article
+  - "/category/:id" display articles depending on the category
 
 ### Getting started
 
