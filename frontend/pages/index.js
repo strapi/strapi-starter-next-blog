@@ -1,23 +1,27 @@
-import React from "react";
-import Articles from "../components/articles";
-import Query from "../components/query";
-import ARTICLES_QUERY from "../apollo/queries/article/articles";
+import React from 'react'
+import Articles from '../components/articles'
+import Layout from '../components/layout'
+import { getArticles, getCategories } from '../lib/api'
 
-const Home = () => {
+const Home = ({ articles, categories }) => {
   return (
-    <div>
+    <Layout categories={categories}>
       <div className="uk-section">
         <div className="uk-container uk-container-large">
           <h1>Strapi blog</h1>
-          <Query query={ARTICLES_QUERY}>
-            {({ data: { articles } }) => {
-              return <Articles articles={articles} />;
-            }}
-          </Query>
+          <Articles articles={articles} />
         </div>
       </div>
-    </div>
-  );
-};
+    </Layout>
+  )
+}
 
-export default Home;
+export async function getStaticProps() {
+  const articles = (await getArticles()) || []
+  const categories = (await getCategories()) || []
+  return {
+    props: { articles, categories },
+  }
+}
+
+export default Home

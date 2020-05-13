@@ -1,13 +1,12 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react'
+import Link from 'next/link'
 
 const Card = ({ article }) => {
-  const imageUrl =
-    process.env.NODE_ENV !== "development"
-      ? article.image.url
-      : process.env.API_URL + article.image.url;
+  const imageUrl = article.image.url.startsWith('/')
+    ? process.env.API_URL + article.image.url
+    : article.image.url
   return (
-    <Link href={{ pathname: "article", query: { id: article.id } }}>
+    <Link as={`/article/${article.id}`} href="/article/[id]">
       <a className="uk-link-reset">
         <div className="uk-card uk-card-muted">
           <div className="uk-card-media-top">
@@ -24,7 +23,7 @@ const Card = ({ article }) => {
         </div>
       </a>
     </Link>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card
