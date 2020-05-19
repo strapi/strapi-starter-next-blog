@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Card = ({ article }) => {
   const imageUrl = article.image.url.startsWith('/')
-    ? process.env.API_URL + article.image.url
+    ? process.env.NEXT_PUBLIC_API_URL + article.image.url
     : article.image.url
   return (
     <Link as={`/article/${article.id}`} href="/article/[id]">
