@@ -29,7 +29,7 @@ Once you have created these accounts you can deploy your instance by clicking on
 
   - Secure your `API_URL` with now by running the following command:
 
-  `now secret add api-url <https://your-strapi-instance.herokuapp.com>`
+  `now secrets add next-public-api-url "<https://your-strapi-instance.herokuapp.com>"`
 
 You can deploy your app and for this you have two options. But for each one of them, just press enter when the root directory of your code is asked.
 
