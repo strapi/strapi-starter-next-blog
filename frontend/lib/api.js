@@ -30,6 +30,7 @@ export async function getArticles() {
       }
       image {
         url
+        alternativeText
       }
     }
   }`)
@@ -45,6 +46,7 @@ export async function getArticle(id) {
       content
       image {
         url
+        alternativeText
       }
       category {
         id
@@ -80,6 +82,7 @@ export async function getCategory(id) {
         content
         image {
           url
+          alternativeText
         }
         category {
           id

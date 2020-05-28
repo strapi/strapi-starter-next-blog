@@ -59,10 +59,7 @@ const createSeedData = async () => {
   });
   const articlesPromises = articles.map(article => {
     const { imageFileName, mimeType, ...rest } = article;
-    const filepath = path.join(
-      strapi.config.seed.path,
-      `/images/${imageFileName}`
-    );
+    const filepath = `./seed/images/${imageFileName}`;
     const size = getFilesizeInBytes(filepath);
     const image = {
       path: filepath,

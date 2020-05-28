@@ -24,6 +24,10 @@
     "/_polyfills": [
       "static/runtime/polyfills.js"
     ],
+    "/article/[id]": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"

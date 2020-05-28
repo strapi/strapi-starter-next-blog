@@ -34,7 +34,7 @@ const Article = ({ article, categories }) => {
 export async function getStaticPaths() {
   const articles = (await getArticles()) || []
   return {
-    paths: articles.map(article => ({
+    paths: articles.map((article) => ({
       params: {
         id: article.id,
       },
@@ -48,6 +48,7 @@ export async function getStaticProps({ params }) {
   const categories = (await getCategories()) || []
   return {
     props: { article, categories },
+    unstable_revalidate: 1,
   }
 }
 

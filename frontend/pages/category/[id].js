@@ -18,7 +18,7 @@ const Category = ({ category, categories }) => {
 export async function getStaticPaths() {
   const categories = (await getCategories()) || []
   return {
-    paths: categories.map(category => ({
+    paths: categories.map((category) => ({
       params: {
         id: category.id,
       },
@@ -32,6 +32,7 @@ export async function getStaticProps({ params }) {
   const categories = (await getCategories()) || []
   return {
     props: { category, categories },
+    unstable_revalidate: 1,
   }
 }
 

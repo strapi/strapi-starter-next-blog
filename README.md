@@ -6,7 +6,7 @@ This starter allows you to try Strapi with Next.js with the example of a simple 
 
 You may want to know how to develop such a starter by your own! This starter is actually the result of this [tutorial](https://strapi.io/blog/build-a-blog-with-next-react-js-strapi-and-apollo)
 
-![screenshot image](/screenshot.png)
+![screenshot image](./screenshot.png)
 
 ### Deploy the backend
 
@@ -72,29 +72,7 @@ Once you have created your account you can deploy your instance by clicking on t
 ```bash
 git clone https://github.com/strapi/strapi-starter-next-blog.git
 cd strapi-starter-next-blog
-
-# Using yarn
-yarn setup:yarn
-
-# Using npm
-npm run setup:npm
 ```
-
-### Scaffold your project
-
-This command will launch both of your backend and frontend servers and do a data migration in your backend server
-
-```bash
-# Using yarn
-yarn build:yarn
-yarn develop:yarn
-
-# Using npm
-npm run build:npm
-npm run develop:npm
-```
-
-Alternatively, you can still start your servers separately:
 
 ### Start the backend server
 
@@ -102,27 +80,38 @@ Alternatively, you can still start your servers separately:
 cd backend
 
 # Using yarn
-yarn build
+yarn
 yarn develop
 
 # Using npm
-npm run build
+npm install
 npm run develop
 ```
 
 ### Start the frontend server
 
+
+  - Create a `.env.local` file containing the following:
+
+```
+API_URL=http://localhost:1337
+```
+
+
 ```bash
 cd frontend
 
 # Using yarn
+yarn
 yarn develop
 
 # Using npm
+npm install
 npm run develop
 ```
 
 Next server is running here => [http://localhost:3000](http://localhost:3000)
+
 Strapi server is running here => [http://localhost:1337](http://localhost:1337)
 
 Enjoy this starter
