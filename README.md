@@ -91,10 +91,10 @@ npm run develop
 ### Start the frontend server
 
 
-  - Create a `.env.local` file containing the following:
+  - Create a `.env.local` file in the `/frontend` directory with following content:
 
 ```
-API_URL=http://localhost:1337
+NEXT_PUBLIC_API_URL=http://localhost:1337
 ```
 
 
