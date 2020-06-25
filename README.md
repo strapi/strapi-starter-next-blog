@@ -4,7 +4,7 @@ Next starter for creating a blog with Strapi.
 
 This starter allows you to try Strapi with Next with the example of a simple blog. It is fully customizable and due to the fact that it is open source, fully open to contributions. Do not hesitate to add new features etc ...
 
-You may want to know how to develop such a starter by your own! This starter is actually the result of this [tutorial](https://strapi.io/blog/build-a-blog-with-next-react-js-strapi-and-apollo)
+You may want to know how to develop such a starter by your own! This starter is actually the result of this [tutorial](https://strapi.io/blog/build-a-blog-with-next-react-js-strapi-and-apollo) **but without using Apollo**
 
 ![screenshot image](/screenshot.png)
 
@@ -82,6 +82,9 @@ yarn develop
 # Using npm
 npm install
 npm run develop
+
+# Create a .env.local file containing the API_URL variable
+echo "API_URL=http://localhost:1337" >> .env.local
 ```
 
 Next server is running here => [http://localhost:3000](http://localhost:3000)
