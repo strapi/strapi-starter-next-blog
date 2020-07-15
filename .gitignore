@@ -109,3 +109,5 @@ coverage
 exports
 .cache
 build
+.next
+.env.local
