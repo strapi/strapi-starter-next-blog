@@ -2,6 +2,7 @@ import React from 'react'
 import Articles from '../components/articles'
 import Layout from '../components/layout'
 import { getArticles, getCategories } from '../lib/api'
+import KyberWidget from '../components/KyberWidget'
 
 const Home = ({ articles, categories }) => {
   return (
@@ -10,6 +11,8 @@ const Home = ({ articles, categories }) => {
         <div className="uk-container uk-container-large">
           <h1>Strapi blog</h1>
           <Articles articles={articles} />
+          
+          <KyberWidget></KyberWidget>
         </div>
       </div>
     </Layout>

@@ -7,5 +7,5 @@
   },
   "env": {
     "API_URL": "@api-url"
-  },
+  }
 }
