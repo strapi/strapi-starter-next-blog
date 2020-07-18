@@ -109,3 +109,9 @@ coverage
 exports
 .cache
 build
+
+############################
+# Vercel
+############################
+
+.vercel
