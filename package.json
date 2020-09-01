@@ -5,7 +5,7 @@
   "scripts": {
     "develop": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT"
   },
   "dependencies": {
     "moment": "^2.24.0",
