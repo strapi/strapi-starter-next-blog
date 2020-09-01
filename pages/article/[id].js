@@ -4,9 +4,7 @@ import { getArticles, getArticle, getCategories } from '../../lib/api'
 import Layout from '../../components/layout'
 
 const Article = ({ article, categories }) => {
-  const imageUrl = article.image.url.startsWith('/')
-    ? process.env.API_URL + article.image.url
-    : article.image.url
+  const imageUrl = 'http://media.idownloadblog.com/wp-content/uploads/2017/11/trueimagination-iPhone-X-wallpaper-by-Solefield.jpg'
   return (
     <Layout categories={categories}>
       <div
