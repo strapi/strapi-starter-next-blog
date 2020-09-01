@@ -2,9 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 const Card = ({ article }) => {
-  const imageUrl = article.image.url.startsWith('/')
-    ? process.env.API_URL + article.image.url
-    : article.image.url
+  const imageUrl = 'http://media.idownloadblog.com/wp-content/uploads/2017/11/trueimagination-iPhone-X-wallpaper-by-Solefield.jpg'
   return (
     <Link as={`/article/${article.id}`} href="/article/[id]">
       <a className="uk-link-reset">
