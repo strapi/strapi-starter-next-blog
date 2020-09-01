@@ -10,7 +10,7 @@ const Card = ({ article }) => {
           <div className="uk-card-media-top">
             <img
               src={imageUrl}
-              alt={article.image.alternativeText}
+              alt={'alt'}
               height="100"
             />
           </div>
