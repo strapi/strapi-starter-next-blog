@@ -15,6 +15,10 @@
     "CLOUDINARY_API_SECRET": {
       "description": "The 'API Secret' of your Cloudinary account",
       "required": true
+    },
+    "API_URL": {
+      "description": "The 'API URL' of strapi be",
+      "required": true
     }
   },
   "addons": ["heroku-postgresql:hobby-dev"],
