@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 const Card = ({ article }) => {
-  const imageUrl = 'http://media.idownloadblog.com/wp-content/uploads/2017/11/trueimagination-iPhone-X-wallpaper-by-Solefield.jpg'
+  const imageUrl = 'https://picsum.photos/500/350'
   return (
     <Link as={`/article/${article.id}`} href="/article/[id]">
       <a className="uk-link-reset">
