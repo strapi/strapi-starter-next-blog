@@ -4,7 +4,7 @@ import { getArticles, getArticle, getCategories } from '../../lib/api'
 import Layout from '../../components/layout'
 
 const Article = ({ article, categories }) => {
-  const imageUrl = 'http://media.idownloadblog.com/wp-content/uploads/2017/11/trueimagination-iPhone-X-wallpaper-by-Solefield.jpg'
+  const imageUrl = 'https://picsum.photos/500/350'
   return (
     <Layout categories={categories}>
       <div
