@@ -13,6 +13,7 @@ const Article = ({ article, categories }) => {
     metaTitle: article.title,
     metaDescription: article.description,
     shareImage: article.image,
+    article: true,
   }
 
   return (
