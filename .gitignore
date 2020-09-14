@@ -109,3 +109,8 @@ coverage
 exports
 .cache
 build
+
+# Custom
+
+.vscode
+.next
