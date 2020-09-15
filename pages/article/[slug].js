@@ -34,16 +34,16 @@ const Article = ({ article, categories }) => {
           <hr className="uk-divider-small" />
           <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
             <div>
-              {article.author.image && (
+              {article.author.picture && (
                 <Image
-                  image={article.author.image}
+                  image={article.author.picture}
                   style={{ position: 'static',  borderRadius: '50%', height: 30 }}
                 />
               )}
             </div>
             <div className="uk-width-expand">
               <p className="uk-margin-remove-bottom">
-                By {article.author.username}
+                By {article.author.name}
               </p>
               <p className="uk-text-meta uk-margin-remove-top"><Moment format="MMM Do YYYY">{article.published_at}</Moment></p>
             </div>
