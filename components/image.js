@@ -1,8 +1,7 @@
-import { getStrapiURL } from '../lib/api'
-import { getStrapiMedia } from '../lib/media'
+import { getStrapiMedia } from "../lib/media";
 
 const Image = ({ image, style }) => {
-  const imageUrl = getStrapiMedia(image)
+  const imageUrl = getStrapiMedia(image);
 
   return (
     <img
@@ -10,7 +9,7 @@ const Image = ({ image, style }) => {
       alt={image.alternativeText || image.name}
       style={style}
     />
-  )
-}
+  );
+};
 
-export default Image
+export default Image;

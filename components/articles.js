@@ -1,10 +1,10 @@
-import React from 'react'
-import Card from './card'
+import React from "react";
+import Card from "./card";
 
 const Articles = ({ articles }) => {
-  const leftArticlesCount = Math.ceil(articles.length / 5)
-  const leftArticles = articles.slice(0, leftArticlesCount)
-  const rightArticles = articles.slice(leftArticlesCount, articles.length)
+  const leftArticlesCount = Math.ceil(articles.length / 5);
+  const leftArticles = articles.slice(0, leftArticlesCount);
+  const rightArticles = articles.slice(leftArticlesCount, articles.length);
 
   return (
     <div>
@@ -12,11 +12,8 @@ const Articles = ({ articles }) => {
         <div>
           {leftArticles.map((article, i) => {
             return (
-              <Card
-                article={article}
-                key={`article__left__${article.slug}`}
-              />
-            )
+              <Card article={article} key={`article__left__${article.slug}`} />
+            );
           })}
         </div>
         <div>
@@ -27,13 +24,13 @@ const Articles = ({ articles }) => {
                   article={article}
                   key={`article__left__${article.slug}`}
                 />
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Articles
+export default Articles;

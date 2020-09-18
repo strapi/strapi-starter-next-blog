@@ -1,6 +1,6 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from './image'
+import React from "react";
+import Link from "next/link";
+import Image from "./image";
 
 const Card = ({ article }) => {
   return (
@@ -21,7 +21,7 @@ const Card = ({ article }) => {
         </div>
       </a>
     </Link>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
