@@ -1,0 +1,34 @@
+{
+  "polyfillFiles": [
+    "static/runtime/polyfills.js"
+  ],
+  "devFiles": [
+    "static/runtime/react-refresh.js"
+  ],
+  "ampDevFiles": [
+    "static/runtime/webpack.js",
+    "static/runtime/amp.js"
+  ],
+  "lowPriorityFiles": [
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js"
+  ],
+  "pages": {
+    "/_app": [
+      "static/runtime/main.js",
+      "static/runtime/webpack.js",
+      "static/pages/_app.js"
+    ],
+    "/_error": [
+      "static/runtime/main.js",
+      "static/runtime/webpack.js",
+      "static/pages/_error.js"
+    ],
+    "/article/[id]": [
+      "static/runtime/main.js",
+      "static/runtime/webpack.js",
+      "static/pages/article/[id].js"
+    ]
+  },
+  "ampFirstPages": []
+}
