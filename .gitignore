@@ -109,3 +109,10 @@ coverage
 exports
 .cache
 build
+
+# Custom
+
+.vscode
+.next
+.env.*
+!.env.example

@@ -1,7 +1,0 @@
-[build]
-  base = "./"
-  publish = "out/"
-  command = "yarn develop"
-
-[template.environment]
-  API_URL = "API_URL"
