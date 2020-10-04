@@ -27,25 +27,34 @@ First, you'll need to create your own copy of this starter. You can do so by cli
 
 ### Backend
 
-Follow the instructions [on this repository](https://github.com/strapi/strapi-starter-blog)
+Create a Strapi project named `backend` using the [blog template](https://github.com/strapi/strapi-template-blog):
+
+```
+# Using Yarn
+yarn create strapi-app backend --template https://github.com/strapi/strapi-template-blog
+
+# Or using NPM
+npx create-strapi-app backend --template https://github.com/strapi/strapi-template-blog
+```
+
+The Strapi server will automatically start and import sample seed data.
 
 ### Frontend
 
-Clone your repository:
+Leave the Strapi backend running in the background. Open another terminal tab, and make sure you're in the `frontend` directory:
 
 ```bash
-git clone <your-github-repo-url>
-cd strapi-starter-next-blog
+cd frontend
 ```
 
-Then start the frontend server:
+Install dependencies and start the Next.js server:
 
 ```bash
-# Using yarn:
+# Using yarn
 yarn install
 yarn develop
 
-# Or using npm:
+# Using npm
 npm install
 npm run develop
 ```
