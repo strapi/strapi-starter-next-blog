@@ -21,50 +21,33 @@ Pages:
 
 ## Getting started
 
-The easiest way to try this starter is to run it locally on your computer.
+Use our `create-strapi-starter` CLI to create your project.
 
-First, you'll need to create your own copy of this starter. You can do so by clicking [the "Use this template" button](https://github.com/strapi/strapi-starter-next-blog/generate) on GitHub, and filling the [form](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
-
-### Backend
-
-Create a Strapi project named `backend` using the [blog template](https://github.com/strapi/strapi-template-blog):
-
-```
+```sh
 # Using Yarn
-yarn create strapi-app backend --template https://github.com/strapi/strapi-template-blog
+yarn create strapi-starter my-project next-blog
 
 # Or using NPM
-npx create-strapi-app backend --template https://github.com/strapi/strapi-template-blog
+npx create-strapi-starter my-project next-blog
 ```
 
-The Strapi server will automatically start and import sample seed data.
+The CLI will create a monorepo, install dependencies, and run your project automatically.
 
-### Frontend
+The Next frontend server will run here => [http://localhost:3000](http://localhost:3000)
 
-Leave the Strapi backend running in the background. Open another terminal tab, and make sure you're in the `frontend` directory:
+The Strapi backend server will run here => [http://localhost:1337](http://localhost:1337)
 
-```bash
-cd frontend
-```
+## Deploying to production
 
-Install dependencies and start the Next.js server:
+You will need to deploy the `frontend` and `backend` projects separately. Here are the docs to deploy each one:
 
-```bash
-# Using yarn
-yarn install
-yarn develop
+- [Deploy Strapi](https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/deployment.html#hosting-provider-guides)
+- [Deploy Next](https://nextjs.org/docs/deployment)
 
-# Using npm
-npm install
-npm run develop
-```
+Don't forget to setup the environment variables on your production app:
 
-If you want to change the default environment variables, create a `.env.local` file like this:
+For the frontend the following environment variable is required: 
+- `NEXT_PUBLIC_STRAPI_API_URL`: URL of your Strapi backend, without trailing slash
 
-```
-cp .env.local.example .env.local
-```
-
-Next server is running here => [http://localhost:3000](http://localhost:3000)
 
 Enjoy this starter!
