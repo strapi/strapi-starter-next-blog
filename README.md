@@ -6,6 +6,10 @@ Next starter for creating a blog with Strapi.
 
 This starter allows you to try Strapi with Next with the example of a simple blog. It is fully customizable and due to the fact that it is open source, fully open to contributions. So do not hesitate to add new features and report bugs!
 
+This starter uses the [Strapi blog template](https://github.com/strapi/strapi-template-blog)
+
+Check out all of our starters [here](https://strapi.io/starters)
+
 ## Features
 
 - 2 Content types: Article, Category
