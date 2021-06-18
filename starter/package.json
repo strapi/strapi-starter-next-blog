@@ -7,6 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "deploy": "next build && next export",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
