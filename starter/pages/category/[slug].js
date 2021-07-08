@@ -1,13 +1,13 @@
-import Articles from "../../components/articles";
-import { fetchAPI } from "../../lib/api";
-import Layout from "../../components/layout";
-import Seo from "../../components/seo";
+import Articles from "../../components/articles"
+import { fetchAPI } from "../../lib/api"
+import Layout from "../../components/layout"
+import Seo from "../../components/seo"
 
 const Category = ({ category, categories }) => {
   const seo = {
     metaTitle: category.name,
     metaDescription: `All ${category.name} articles`,
-  };
+  }
 
   return (
     <Layout categories={categories}>
@@ -19,11 +19,11 @@ const Category = ({ category, categories }) => {
         </div>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
 export async function getStaticPaths() {
-  const categories = await fetchAPI("/categories");
+  const categories = await fetchAPI("/categories")
 
   return {
     paths: categories.map((category) => ({
@@ -32,17 +32,17 @@ export async function getStaticPaths() {
       },
     })),
     fallback: false,
-  };
+  }
 }
 
 export async function getStaticProps({ params }) {
-  const category = (await fetchAPI(`/categories?slug=${params.slug}`))[0];
-  const categories = await fetchAPI("/categories");
+  const category = (await fetchAPI(`/categories?slug=${params.slug}`))[0]
+  const categories = await fetchAPI("/categories")
 
   return {
     props: { category, categories },
     revalidate: 1,
-  };
+  }
 }
 
-export default Category;
+export default Category
