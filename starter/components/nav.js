@@ -1,5 +1,5 @@
-import React from "react";
-import Link from "next/link";
+import React from "react"
+import Link from "next/link"
 
 const Nav = ({ categories }) => {
   return (
@@ -23,13 +23,13 @@ const Nav = ({ categories }) => {
                     <a className="uk-link-reset">{category.name}</a>
                   </Link>
                 </li>
-              );
+              )
             })}
           </ul>
         </div>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav

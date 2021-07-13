@@ -1,8 +1,8 @@
-import React from "react";
-import Articles from "../components/articles";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
-import { fetchAPI } from "../lib/api";
+import React from "react"
+import Articles from "../components/articles"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import { fetchAPI } from "../lib/api"
 
 const Home = ({ articles, categories, homepage }) => {
   return (
@@ -15,8 +15,8 @@ const Home = ({ articles, categories, homepage }) => {
         </div>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
 export async function getStaticProps() {
   // Run API calls in parallel
@@ -24,12 +24,12 @@ export async function getStaticProps() {
     fetchAPI("/articles"),
     fetchAPI("/categories"),
     fetchAPI("/homepage"),
-  ]);
+  ])
 
   return {
     props: { articles, categories, homepage },
     revalidate: 1,
-  };
+  }
 }
 
-export default Home;
+export default Home
