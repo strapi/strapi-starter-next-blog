@@ -4,7 +4,7 @@ import NextImage from "./image"
 
 const Card = ({ article }) => {
   return (
-    <Link as={`/article/${article.slug}`} href="/article/[id]">
+    <Link href={`/article/${article.slug}`}>
       <a className="uk-link-reset">
         <div className="uk-card uk-card-muted">
           <div className="uk-card-media-top">
