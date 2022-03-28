@@ -1,3 +1,9 @@
+**:no_entry: DEPRECATED**
+
+This repository is no longer maintained and only works for Strapi v3. You can find the latest Strapi v4 version of this starter on the [starters-and-templates monorepo](https://github.com/strapi/starters-and-templates/tree/main/packages/starters/next-blog).
+
+---
+
 # Strapi Starter Next Blog
 
 Next starter for creating a blog with Strapi.
@@ -28,11 +34,7 @@ Pages:
 Use our `create-strapi-starter` CLI to create your project.
 
 ```sh
-# Using Yarn
-yarn create strapi-starter my-project next-blog
-
-# Or using NPM
-npx create-strapi-starter my-project next-blog
+npx create-strapi-starter@3 my-project next-blog
 ```
 
 The CLI will create a monorepo, install dependencies, and run your project automatically.
